@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <title>Home</title>
+</head>
+<body>
+    <h1 align="center">Home, Sweet Home!</h1><hr>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam non laudantium accusantium, pariatur corrupti doloribus, fugit debitis accusamus ullam tempore sunt ad similique nostrum quidem, id fugiat quisquam porro explicabo?</p>
+
+    <% if(typeof result == 'undefined') { %>
+        <form action="/" method="POST">
+            num1: <input type="text" name="num1"><br>
+            num2: <input type="text" name="num2"><br><br>
+            <button type="submit" class="btn btn-info">Submit</button>
+        </form>
+    <% } else { %>
+        <h2>The multiplication is: <%= result %></h2>
+        <% if( result == 30 ) { %>
+            <br><button type="button" class="btn btn-success">You Got It Right!</button>
+        <% } else { %>
+            <br><button type="button" class="btn btn-danger">Try Again!</button>
+        <% } %>
+    <% } %>
+</body>
+</html>
